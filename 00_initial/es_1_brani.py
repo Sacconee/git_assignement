@@ -47,7 +47,36 @@ class Brano:
     def __str__(self):
         return f"{self.titolo}"
 
+class CD:
+    def __init__(self, autore:str , titolo:str, listabrani:list, duratacomplessiva:int):
+        self.titolo=titolo
+        self.autore=autore
+        self.listabrani=listabrani
+        self.duratacomplessiva=duratacomplessiva
+
+    @property
+    def titolo(self):
+        return self.titolo
+
+    @property
+    def autore(self):
+        return self.autore
+
+    @property
+    def listabrani(self):
+        return self.listabrani
+
+    @property       
+    def duratacomplessiva(self):
+        return self.duratacomplessiva
+    
+    def __str__(self):
+        return f"{self.titolo} - {self.autore} - {self.listabrani} - {self.duratacomplessiva}"
+
 
 if __name__ == "__main__":
-    newBrano = Brano("Gue", "Scooteroni", "180")
-    print(newBrano)         
+    newBrano = Brano("Gue", "Scooteroni", 180)
+    print(newBrano)     
+    newCD = CD("Gue", "Squalo", ["Scooteroni", "Lamborghini"], 360)
+    print(newCD)    
+      
